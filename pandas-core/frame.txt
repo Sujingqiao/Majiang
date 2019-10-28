@@ -1,0 +1,161 @@
+class DataFrame(NDFrame):
+    def _constructor(self) -> Type["DataFrame"]:
+    def _constructor_expanddim(self):
+    def __init__(
+    def axes(self) -> List[Index]:
+    def shape(self) -> Tuple[int, int]:
+    def _is_homogeneous_type(self) -> bool:
+    def _repr_fits_vertical_(self) -> bool:
+    def _repr_fits_horizontal_(self, ignore_width: bool = False) -> bool:
+    def _info_repr(self) -> bool:
+    def __repr__(self) -> str:
+    def _repr_html_(self) -> Optional[str]:
+    def to_string(
+    def style(self):
+    def items(self) -> Iterable[Tuple[Hashable, Series]]:
+    def iteritems(self):
+    def iterrows(self):
+    def itertuples(self, index=True, name="Pandas"):
+    def __len__(self):
+    def dot(self, other):
+    def __matmul__(self, other):
+    def __rmatmul__(self, other):
+    def from_dict(cls, data, orient="columns", dtype=None, columns=None):
+    def to_numpy(self, dtype=None, copy=False):
+    def to_dict(self, orient="dict", into=dict):
+            The collections.abc.Mapping subclass used for all Mappings
+            in the return value.  Can be the actual class or an empty
+        [defaultdict(<class 'list'>, {'col1': 1, 'col2': 0.5}),
+         defaultdict(<class 'list'>, {'col1': 2, 'col2': 0.75})]
+    def to_gbq(
+    def from_records(
+    def to_records(
+    def from_items(cls, items, columns=None, orient="columns"):
+    def _from_arrays(cls, arrays, columns, index, dtype=None):
+    def to_stata(
+    def to_feather(self, fname):
+    def to_parquet(
+    def to_html(
+    def info(
+        <class 'pandas.core.frame.DataFrame'>
+        <class 'pandas.core.frame.DataFrame'>
+        <class 'pandas.core.frame.DataFrame'>
+        <class 'pandas.core.frame.DataFrame'>
+        def _verbose_repr():
+        def _non_verbose_repr():
+        def _sizeof_fmt(num, size_qualifier):
+    def memory_usage(self, index=True, deep=False):
+    def transpose(self, *args, **kwargs):
+    def _unpickle_frame_compat(self, state):  # pragma: no cover
+    def _unpickle_matrix_compat(self, state):  # pragma: no cover
+    def _ixs(self, i: int, axis: int = 0):
+    def __getitem__(self, key):
+    def _getitem_bool_array(self, key):
+    def _getitem_multilevel(self, key):
+    def _get_value(self, index, col, takeable: bool = False):
+    def __setitem__(self, key, value):
+    def _setitem_slice(self, key, value):
+    def _setitem_array(self, key, value):
+    def _setitem_frame(self, key, value):
+    def _set_item(self, key, value):
+    def _set_value(self, index, col, value, takeable: bool = False):
+    def _ensure_valid_index(self, value):
+    def _box_item_values(self, key, values):
+    def _box_col_values(self, values, items):
+    def query(self, expr, inplace=False, **kwargs):
+    def eval(self, expr, inplace=False, **kwargs):
+    def select_dtypes(self, include=None, exclude=None):
+        def extract_unique_dtypes_from_dtypes_set(
+    def insert(self, loc, column, value, allow_duplicates=False):
+    def assign(self, **kwargs):
+    def _sanitize_column(self, key, value, broadcast=True):
+        def reindexer(value):
+    def _series(self):
+    def lookup(self, row_labels, col_labels):
+    def _reindex_axes(self, axes, level, limit, tolerance, method, fill_value, copy):
+    def _reindex_index(
+    def _reindex_columns(
+    def _reindex_multi(self, axes, copy, fill_value):
+    def align(
+    def reindex(self, *args, **kwargs):
+    def drop(
+    def rename(self, *args, **kwargs):
+    def fillna(
+    def replace(
+    def shift(self, periods=1, freq=None, axis=0, fill_value=None):
+    def set_index(
+    def reset_index(
+                 class  max_speed
+            index   class  max_speed
+            class  max_speed
+        class  name
+                 class  speed species
+                 class    max    type
+                        class    max    type
+                        class    max    type
+        def _maybe_casted_values(index, labels=None):
+    def isna(self):
+    def isnull(self):
+    def notna(self):
+    def notnull(self):
+    def dropna(self, axis=0, how="any", thresh=None, subset=None, inplace=False):
+    def drop_duplicates(self, subset=None, keep="first", inplace=False):
+    def duplicated(self, subset=None, keep="first"):
+        def f(vals):
+    def sort_values(
+    def sort_index(
+    def nlargest(self, n, columns, keep="first"):
+    def nsmallest(self, n, columns, keep="first"):
+    def swaplevel(self, i=-2, j=-1, axis=0):
+    def reorder_levels(self, order, axis=0):
+    def _combine_frame(self, other, func, fill_value=None, level=None):
+            def _arith_op(left, right):
+    def _combine_match_index(self, other, func):
+    def _construct_result(self, result) -> "DataFrame":
+    def combine(self, other, func, fill_value=None, overwrite=True):
+    def combine_first(self, other):
+        def extract_values(arr):
+        def combiner(x, y):
+    def update(
+    def pivot(self, index=None, columns=None, values=None):
+    def pivot_table(
+    def stack(self, level=-1, dropna=True):
+    def explode(self, column: Union[str, Tuple]) -> "DataFrame":
+    def unstack(self, level=-1, fill_value=None):
+    def melt(
+    def diff(self, periods=1, axis=0):
+    def _gotitem(
+    def aggregate(self, func, axis=0, *args, **kwargs):
+    def _aggregate(self, arg, axis=0, *args, **kwargs):
+    def transform(self, func, axis=0, *args, **kwargs):
+    def apply(
+    def applymap(self, func):
+        def infer(x):
+    def append(self, other, ignore_index=False, verify_integrity=False, sort=None):
+    def join(self, other, on=None, how="left", lsuffix="", rsuffix="", sort=False):
+    def _join_compat(
+    def merge(
+    def round(self, decimals=0, *args, **kwargs):
+        def _dict_round(df, decimals):
+        def _series_round(s, decimals):
+    def corr(self, method="pearson", min_periods=1):
+        >>> def histogram_intersection(a, b):
+    def cov(self, min_periods=None):
+    def corrwith(self, other, axis=0, drop=False, method="pearson"):
+            def c(x):
+    def count(self, axis=0, level=None, numeric_only=False):
+    def _count_level(self, level, axis=0, numeric_only=False):
+    def _reduce(
+        def f(x):
+    def nunique(self, axis=0, dropna=True):
+    def idxmin(self, axis=0, skipna=True):
+    def idxmax(self, axis=0, skipna=True):
+    def _get_agg_axis(self, axis_num):
+    def mode(self, axis=0, numeric_only=False, dropna=True):
+        def f(s):
+    def quantile(self, q=0.5, axis=0, numeric_only=True, interpolation="linear"):
+    def to_timestamp(self, freq=None, how="start", axis=0, copy=True):
+    def to_period(self, freq=None, axis=0, copy=True):
+    def isin(self, values):
+def _from_nested_dict(data):
+def _put_str(s, space):

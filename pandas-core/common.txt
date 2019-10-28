@@ -1,0 +1,34 @@
+class SettingWithCopyError(ValueError):
+class SettingWithCopyWarning(Warning):
+def flatten(l):
+def consensus_name_attr(objs):
+def maybe_box(indexer, values, obj, key):
+def maybe_box_datetimelike(value):
+def is_bool_indexer(key: Any) -> bool:
+def cast_scalar_indexer(val):
+def not_none(*args):
+def any_none(*args):
+def all_none(*args):
+def any_not_none(*args):
+def all_not_none(*args):
+def count_not_none(*args):
+def try_sort(iterable):
+def dict_keys_to_ordered_list(mapping):
+def asarray_tuplesafe(values, dtype=None):
+def index_labels_to_array(labels, dtype=None):
+def maybe_make_list(obj):
+def maybe_iterable_to_list(obj: Union[Iterable, Any]) -> Union[list, Any]:
+def is_null_slice(obj):
+def is_true_slices(l):
+def is_full_slice(obj, l):
+def get_callable_name(obj):
+    # fall back to class name
+def apply_if_callable(maybe_callable, obj, **kwargs):
+def dict_compat(d):
+def standardize_mapping(into):
+    into : instance or subclass of collections.abc.Mapping
+    mapping : a collections.abc.Mapping subclass or other constructor
+def random_state(state=None):
+def pipe(obj, func, *args, **kwargs):
+def get_rename_function(mapper):
+        def f(x):

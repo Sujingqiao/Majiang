@@ -1,0 +1,84 @@
+class Resampler(_GroupBy):
+    def __init__(self, obj, groupby=None, axis=0, kind=None, **kwargs):
+    def __str__(self):
+    def __getattr__(self, attr):
+    def __iter__(self):
+    def obj(self):
+    def ax(self):
+    def _typ(self):
+    def _from_selection(self):
+    def _convert_obj(self, obj):
+    def _get_binner_for_time(self):
+    def _set_binner(self):
+    def _get_binner(self):
+    def _assure_grouper(self):
+    def pipe(self, func, *args, **kwargs):
+    def aggregate(self, func, *args, **kwargs):
+    def transform(self, arg, *args, **kwargs):
+    def _downsample(self, f):
+    def _upsample(self, f, limit=None, fill_value=None):
+    def _gotitem(self, key, ndim, subset=None):
+    def _groupby_and_aggregate(self, how, grouper=None, *args, **kwargs):
+    def _apply_loffset(self, result):
+    def _get_resampler_for_grouping(self, groupby, **kwargs):
+        Return the correct class for resampling with groupby.
+    def _wrap_result(self, result):
+    def pad(self, limit=None):
+    def nearest(self, limit=None):
+    def backfill(self, limit=None):
+    def fillna(self, method, limit=None):
+    def interpolate(
+    def asfreq(self, fill_value=None):
+    def std(self, ddof=1, *args, **kwargs):
+    def var(self, ddof=1, *args, **kwargs):
+    def size(self):
+    def quantile(self, q=0.5, **kwargs):
+    def f(self, _method=method, min_count=0, *args, **kwargs):
+    def g(self, _method=method, *args, **kwargs):
+    def h(self, _method=method):
+    def h(self, _method=method):
+def _maybe_process_deprecations(r, how=None, fill_method=None, limit=None):
+class _GroupByMixin(GroupByMixin):
+    def __init__(self, obj, *args, **kwargs):
+    def _apply(self, f, grouper=None, *args, **kwargs):
+        def func(x):
+class DatetimeIndexResampler(Resampler):
+    def _resampler_for_grouping(self):
+    def _get_binner_for_time(self):
+    def _downsample(self, how, **kwargs):
+    def _adjust_binner_for_upsample(self, binner):
+    def _upsample(self, method, limit=None, fill_value=None):
+    def _wrap_result(self, result):
+class DatetimeIndexResamplerGroupby(_GroupByMixin, DatetimeIndexResampler):
+    def _constructor(self):
+class PeriodIndexResampler(DatetimeIndexResampler):
+    def _resampler_for_grouping(self):
+    def _get_binner_for_time(self):
+    def _convert_obj(self, obj):
+    def _downsample(self, how, **kwargs):
+    def _upsample(self, method, limit=None, fill_value=None):
+class PeriodIndexResamplerGroupby(_GroupByMixin, PeriodIndexResampler):
+    def _constructor(self):
+class TimedeltaIndexResampler(DatetimeIndexResampler):
+    def _resampler_for_grouping(self):
+    def _get_binner_for_time(self):
+    def _adjust_binner_for_upsample(self, binner):
+class TimedeltaIndexResamplerGroupby(_GroupByMixin, TimedeltaIndexResampler):
+    def _constructor(self):
+def resample(obj, kind=None, **kwds):
+def get_resampler_for_grouping(
+class TimeGrouper(Grouper):
+    Custom groupby class for time-interval grouping.
+    def __init__(
+    def _get_resampler(self, obj, kind=None):
+    def _get_grouper(self, obj, validate=True):
+    def _get_time_bins(self, ax):
+    def _adjust_bin_edges(self, binner, ax_values):
+    def _get_time_delta_bins(self, ax):
+    def _get_time_period_bins(self, ax):
+    def _get_period_bins(self, ax):
+def _take_new_index(obj, indexer, new_index, axis=0):
+def _get_timestamp_range_edges(first, last, offset, closed="left", base=0):
+def _get_period_range_edges(first, last, offset, closed="left", base=0):
+def _adjust_dates_anchored(first, last, offset, closed="right", base=0):
+def asfreq(obj, freq, method=None, how=None, normalize=False, fill_value=None):

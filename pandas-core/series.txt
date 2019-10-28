@@ -1,0 +1,132 @@
+def remove_na(arr):
+def _coerce_method(converter):
+    def wrapper(self):
+class Series(base.IndexOpsMixin, generic.NDFrame):
+    def __init__(
+    def _init_dict(self, data, index=None, dtype=None):
+    def from_array(
+    def _constructor(self):
+    def _constructor_expanddim(self):
+    def _can_hold_na(self):
+    def _set_axis(self, axis, labels, fastpath=False):
+    def _set_subtyp(self, is_all_dates):
+    def _update_inplace(self, result, **kwargs):
+    def name(self):
+    def name(self, value):
+    def dtype(self):
+    def dtypes(self):
+    def ftype(self):
+    def ftypes(self):
+    def values(self):
+    def _values(self):
+    def get_values(self):
+    def _internal_get_values(self):
+    def asobject(self):
+    def ravel(self, order="C"):
+    def compress(self, condition, *args, **kwargs):
+    def nonzero(self):
+    def put(self, *args, **kwargs):
+    def __len__(self):
+    def view(self, dtype=None):
+    def __array_ufunc__(
+        def construct_return(result):
+    def __array__(self, dtype=None):
+    def real(self):
+    def real(self, v):
+    def imag(self):
+    def imag(self, v):
+    def _unpickle_series_compat(self, state):
+    def axes(self):
+    def take(self, indices, axis=0, is_copy=False, **kwargs):
+    def _ixs(self, i: int, axis: int = 0):
+    def _slice(self, slobj: slice, axis: int = 0, kind=None):
+    def __getitem__(self, key):
+    def _get_with(self, key):
+    def _get_values_tuple(self, key):
+    def _get_values(self, indexer):
+    def _get_value(self, label, takeable: bool = False):
+    def __setitem__(self, key, value):
+    def _set_with_engine(self, key, value):
+    def _set_with(self, key, value):
+    def _set_labels(self, key, value):
+    def _set_values(self, key, value):
+    def _set_value(self, label, value, takeable: bool = False):
+    def _is_mixed_type(self):
+    def repeat(self, repeats, axis=None):
+    def reset_index(self, level=None, drop=False, name=None, inplace=False):
+    def __repr__(self):
+    def to_string(
+    def items(self):
+    def iteritems(self):
+    def keys(self):
+    def to_dict(self, into=dict):
+            The collections.abc.Mapping subclass to use as the return
+            object. Can be the actual class or an empty
+        defaultdict(<class 'list'>, {0: 1, 1: 2, 2: 3, 3: 4})
+    def to_frame(self, name=None):
+    def _set_name(self, name, inplace=False):
+    def count(self, level=None):
+    def mode(self, dropna=True):
+    def unique(self):
+    def drop_duplicates(self, keep="first", inplace=False):
+    def duplicated(self, keep="first"):
+    def idxmin(self, axis=0, skipna=True, *args, **kwargs):
+    def idxmax(self, axis=0, skipna=True, *args, **kwargs):
+    def round(self, decimals=0, *args, **kwargs):
+    def quantile(self, q=0.5, interpolation="linear"):
+    def corr(self, other, method="pearson", min_periods=None):
+        >>> def histogram_intersection(a, b):
+    def cov(self, other, min_periods=None):
+    def diff(self, periods=1):
+    def autocorr(self, lag=1):
+    def dot(self, other):
+    def __matmul__(self, other):
+    def __rmatmul__(self, other):
+    def searchsorted(self, value, side="left", sorter=None):
+    def append(self, to_append, ignore_index=False, verify_integrity=False):
+    def _binop(self, other, func, level=None, fill_value=None):
+    def combine(self, other, func, fill_value=None):
+    def combine_first(self, other):
+    def update(self, other):
+    def sort_values(
+        def _try_kind_sort(arr):
+    def sort_index(
+    def argsort(self, axis=0, kind="quicksort", order=None):
+    def nlargest(self, n=5, keep="first"):
+    def nsmallest(self, n=5, keep="first"):
+    def swaplevel(self, i=-2, j=-1, copy=True):
+    def reorder_levels(self, order):
+    def explode(self) -> "Series":
+    def unstack(self, level=-1, fill_value=None):
+    def map(self, arg, na_action=None):
+        dictionary is a ``dict`` subclass that defines ``__missing__`` (i.e.
+    def _gotitem(self, key, ndim, subset=None):
+    def aggregate(self, func, axis=0, *args, **kwargs):
+    def transform(self, func, axis=0, *args, **kwargs):
+    def apply(self, func, convert_dtype=True, args=(), **kwds):
+        >>> def square(x):
+        >>> def subtract_custom_value(x, custom_value):
+        >>> def add_custom_values(x, **kwargs):
+            def f(x):
+    def _reduce(
+    def _reindex_indexer(self, new_index, indexer, copy):
+    def _needs_reindex_multi(self, axes, method, level):
+    def align(
+    def rename(self, index=None, **kwargs):
+    def reindex(self, index=None, **kwargs):
+    def drop(
+    def fillna(
+    def replace(
+    def shift(self, periods=1, freq=None, axis=0, fill_value=None):
+    def memory_usage(self, index=True, deep=False):
+    def isin(self, values):
+    def between(self, left, right, inclusive=True):
+    def to_csv(self, *args, **kwargs):
+    def isna(self):
+    def isnull(self):
+    def notna(self):
+    def notnull(self):
+    def dropna(self, axis=0, inplace=False, **kwargs):
+    def valid(self, inplace=False, **kwargs):
+    def to_timestamp(self, freq=None, how="start", copy=True):
+    def to_period(self, freq=None, copy=True):

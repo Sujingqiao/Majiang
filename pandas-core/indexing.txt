@@ -1,0 +1,93 @@
+def get_indexers_list():
+class _IndexSlice:
+    Using the IndexSlice class for a more intuitive command:
+    def __getitem__(self, arg):
+class IndexingError(Exception):
+class _NDFrameIndexer(_NDFrameIndexerBase):
+    def __call__(self, axis=None):
+    def __iter__(self):
+    def __getitem__(self, key):
+    def _get_label(self, label, axis: int):
+    def _get_loc(self, key: int, axis: int):
+    def _slice(self, obj, axis: int, kind=None):
+    def _get_setitem_indexer(self, key):
+    def __setitem__(self, key, value):
+    def _validate_key(self, key, axis: int):
+    def _has_valid_tuple(self, key: Tuple):
+    def _is_nested_tuple_indexer(self, tup: Tuple):
+    def _convert_tuple(self, key):
+    def _convert_scalar_indexer(self, key, axis: int):
+    def _convert_slice_indexer(self, key: slice, axis: int):
+    def _has_valid_setitem_indexer(self, indexer):
+    def _has_valid_positional_setitem_indexer(self, indexer):
+    def _setitem_with_indexer(self, indexer, value):
+            def setter(item, v):
+    def _setitem_with_indexer_missing(self, indexer, value):
+    def _align_series(self, indexer, ser: ABCSeries, multiindex_indexer: bool = False):
+            def ravel(i):
+    def _align_frame(self, indexer, df: ABCDataFrame):
+    def _getitem_tuple(self, tup: Tuple):
+    def _multi_take_opportunity(self, tup: Tuple):
+    def _multi_take(self, tup: Tuple):
+    def _convert_for_reindex(self, key, axis: int):
+    def _handle_lowerdim_multi_index_axis0(self, tup: Tuple):
+    def _getitem_lowerdim(self, tup: Tuple):
+    def _getitem_nested_tuple(self, tup: Tuple):
+    def _getitem_axis(self, key, axis: int):
+    def _get_listlike_indexer(self, key, axis: int, raise_missing: bool = False):
+    def _getitem_iterable(self, key, axis: int):
+    def _validate_read_indexer(
+    def _convert_to_indexer(self, obj, axis: int, raise_missing: bool = False):
+    def _get_slice_axis(self, slice_obj: slice, axis: int):
+class _IXIndexer(_NDFrameIndexer):
+    def __init__(self, name, obj):
+    def _validate_key(self, key, axis: int):
+    def _convert_for_reindex(self, key, axis: int):
+class _LocationIndexer(_NDFrameIndexer):
+    def __getitem__(self, key):
+    def _is_scalar_access(self, key: Tuple):
+    def _getitem_scalar(self, key):
+    def _getitem_axis(self, key, axis: int):
+    def _getbool_axis(self, key, axis: int):
+    def _get_slice_axis(self, slice_obj: slice, axis: int):
+class _LocIndexer(_LocationIndexer):
+    def _validate_key(self, key, axis: int):
+    def _is_scalar_access(self, key: Tuple):
+    def _getitem_scalar(self, key):
+    def _get_partial_string_timestamp_match_key(self, key, labels):
+    def _getitem_axis(self, key, axis: int):
+class _iLocIndexer(_LocationIndexer):
+    <class 'pandas.core.series.Series'>
+    <class 'pandas.core.frame.DataFrame'>
+    def _validate_key(self, key, axis: int):
+    def _has_valid_setitem_indexer(self, indexer):
+    def _is_scalar_access(self, key: Tuple):
+    def _getitem_scalar(self, key):
+    def _validate_integer(self, key: int, axis: int):
+    def _getitem_tuple(self, tup: Tuple):
+    def _get_list_axis(self, key, axis: int):
+    def _getitem_axis(self, key, axis: int):
+    # raise_missing is included for compat with the parent class signature
+    def _convert_to_indexer(self, obj, axis: int, raise_missing: bool = False):
+class _ScalarAccessIndexer(_NDFrameIndexerBase):
+    def _convert_key(self, key, is_setter: bool = False):
+    def __getitem__(self, key):
+    def __setitem__(self, key, value):
+class _AtIndexer(_ScalarAccessIndexer):
+    def _convert_key(self, key, is_setter: bool = False):
+class _iAtIndexer(_ScalarAccessIndexer):
+    def _convert_key(self, key, is_setter: bool = False):
+def _tuplify(ndim: int, loc) -> tuple:
+def convert_to_index_sliceable(obj, key):
+def check_bool_indexer(index: Index, key) -> np.ndarray:
+def convert_missing_indexer(indexer):
+def convert_from_missing_indexer_tuple(indexer, axes):
+    def get_indexer(_i, _idx):
+def maybe_convert_ix(*args):
+def is_nested_tuple(tup, labels):
+def is_label_like(key):
+def need_slice(obj):
+def _non_reducing_slice(slice_):
+    def pred(part):
+def _maybe_numeric_slice(df, slice_, include_bool=False):
+def _can_do_equal_len(labels, value, plane_indexer, lplane_indexer, obj):

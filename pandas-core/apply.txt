@@ -1,0 +1,30 @@
+def frame_apply(
+class FrameApply:
+    def __init__(self, obj, func, raw, result_type, ignore_failures, args, kwds):
+            def f(x):
+    def columns(self):
+    def index(self):
+    def values(self):
+    def dtypes(self):
+    def agg_axis(self):
+    def get_result(self):
+    def apply_empty_result(self):
+    def apply_raw(self):
+    def apply_broadcast(self, target):
+    def apply_standard(self):
+            # Preserve subclass for e.g. test_subclassed_apply
+    def apply_series_generator(self):
+    def wrap_results(self):
+class FrameRowApply(FrameApply):
+    def apply_broadcast(self):
+    def series_generator(self):
+    def result_index(self):
+    def result_columns(self):
+    def wrap_results_for_axis(self):
+class FrameColumnApply(FrameApply):
+    def apply_broadcast(self):
+    def series_generator(self):
+    def result_index(self):
+    def result_columns(self):
+    def wrap_results_for_axis(self):
+    def infer_to_same_shape(self):

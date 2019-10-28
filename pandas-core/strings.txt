@@ -1,0 +1,93 @@
+def cat_core(list_of_columns: List, sep: str):
+def cat_safe(list_of_columns: List, sep: str):
+def _na_map(f, arr, na_result=np.nan, dtype=object):
+def _map(f, arr, na_mask=False, na_value=np.nan, dtype=object):
+            def g(x):
+def str_count(arr, pat, flags=0):
+def str_contains(arr, pat, case=True, flags=0, na=np.nan, regex=True):
+def str_startswith(arr, pat, na=np.nan):
+def str_endswith(arr, pat, na=np.nan):
+def str_replace(arr, pat, repl, n=-1, case=None, flags=0, regex=True):
+def str_repeat(arr, repeats):
+        def scalar_rep(x):
+        def rep(x, r):
+def str_match(arr, pat, case=True, flags=0, na=np.nan):
+def _get_single_group_name(rx):
+def _groups_or_na_fun(regex):
+    def f(x):
+def _result_dtype(arr):
+def _str_extract_noexpand(arr, pat, flags=0):
+def _str_extract_frame(arr, pat, flags=0):
+def str_extract(arr, pat, flags=0, expand=True):
+def str_extractall(arr, pat, flags=0):
+def str_get_dummies(arr, sep="|"):
+def str_join(arr, sep):
+def str_findall(arr, pat, flags=0):
+def str_find(arr, sub, start=0, end=None, side="left"):
+def str_index(arr, sub, start=0, end=None, side="left"):
+def str_pad(arr, width, side="left", fillchar=" "):
+def str_split(arr, pat=None, n=None):
+def str_rsplit(arr, pat=None, n=None):
+def str_slice(arr, start=None, stop=None, step=None):
+def str_slice_replace(arr, start=None, stop=None, repl=None):
+    def f(x):
+def str_strip(arr, to_strip=None, side="both"):
+def str_wrap(arr, width, **kwargs):
+def str_translate(arr, table):
+def str_get(arr, i):
+    def f(x):
+def str_decode(arr, encoding, errors="strict"):
+def str_encode(arr, encoding, errors="strict"):
+def forbid_nonstring_types(forbidden, name=None):
+    def _forbid_nonstring_types(func):
+        def wrapper(self, *args, **kwargs):
+def _noarg_wrapper(
+    def wrapper(self):
+def _pat_wrapper(
+    def wrapper1(self, pat):
+    def wrapper2(self, pat, flags=0, **kwargs):
+    def wrapper3(self, pat, na=np.nan):
+def copy(source):
+    def do_copy(target):
+class StringMethods(NoNewAttributesMixin):
+    def __init__(self, data):
+    def _validate(data):
+    def __getitem__(self, key):
+    def __iter__(self):
+    def _wrap_result(
+            def cons_row(x):
+    def _get_series_list(self, others):
+    def cat(self, others=None, sep=None, na_rep=None, join="left"):
+    def split(self, pat=None, n=-1, expand=False):
+    def rsplit(self, pat=None, n=-1, expand=False):
+    def partition(self, sep=" ", expand=True):
+    def rpartition(self, sep=" ", expand=True):
+    def get(self, i):
+    def join(self, sep):
+    def contains(self, pat, case=True, flags=0, na=np.nan, regex=True):
+    def match(self, pat, case=True, flags=0, na=np.nan):
+    def replace(self, pat, repl, n=-1, case=None, flags=0, regex=True):
+    def repeat(self, repeats):
+    def pad(self, width, side="left", fillchar=" "):
+    def center(self, width, fillchar=" "):
+    def ljust(self, width, fillchar=" "):
+    def rjust(self, width, fillchar=" "):
+    def zfill(self, width):
+    def slice(self, start=None, stop=None, step=None):
+    def slice_replace(self, start=None, stop=None, repl=None):
+    def decode(self, encoding, errors="strict"):
+    def encode(self, encoding, errors="strict"):
+    def strip(self, to_strip=None):
+    def lstrip(self, to_strip=None):
+    def rstrip(self, to_strip=None):
+    def wrap(self, width, **kwargs):
+    def get_dummies(self, sep="|"):
+    def translate(self, table):
+    def extract(self, pat, flags=0, expand=True):
+    def extractall(self, pat, flags=0):
+    def find(self, sub, start=0, end=None):
+    def rfind(self, sub, start=0, end=None):
+    def normalize(self, form):
+    def index(self, sub, start=0, end=None):
+    def rindex(self, sub, start=0, end=None):
+    def _make_accessor(cls, data):

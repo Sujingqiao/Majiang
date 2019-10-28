@@ -1,0 +1,41 @@
+class DirNamesMixin:
+    def _dir_deletions(self):
+    def _dir_additions(self):
+    def __dir__(self):
+class PandasDelegate:
+    An abstract base class for delegating methods/properties.
+    def _delegate_property_get(self, name, *args, **kwargs):
+    def _delegate_property_set(self, name, value, *args, **kwargs):
+    def _delegate_method(self, name, *args, **kwargs):
+    def _add_delegate_accessors(cls, delegate, accessors, typ, overwrite=False):
+        cls : the class to add the methods/properties to
+        delegate : the class to get methods/properties & doc-strings
+           Overwrite the method/property in the target class if it exists.
+        def _create_delegator_property(name):
+            def _getter(self):
+            def _setter(self, new_values):
+        def _create_delegator_method(name):
+            def f(self, *args, **kwargs):
+def delegate_names(delegate, accessors, typ, overwrite=False):
+    Add delegated names to a class using a class decorator.  This provides
+    below a class definition.
+        The class to get methods/properties & doc-strings.
+       Overwrite the method/property in the target class if it exists.
+        A class decorator.
+    class CategoricalAccessor(PandasDelegate):
+    def add_delegate_accessors(cls):
+class CachedAccessor:
+        The class with the extension methods. The class' __init__ method
+    def __init__(self, name, accessor):
+    def __get__(self, obj, cls):
+def _register_accessor(name, cls):
+    def decorator(accessor):
+    A class decorator.
+    def __init__(self, pandas_object):  # noqa: E999
+    class GeoAccessor:
+        def __init__(self, pandas_obj):
+        def center(self):
+        def plot(self):
+def register_dataframe_accessor(name):
+def register_series_accessor(name):
+def register_index_accessor(name):

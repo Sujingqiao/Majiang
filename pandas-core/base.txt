@@ -1,0 +1,76 @@
+class PandasObject(DirNamesMixin):
+    """baseclass for various pandas objects"""
+    def _constructor(self):
+        """class constructor (for this class it's just `__class__`"""
+    def __repr__(self):
+    def _reset_cache(self, key=None):
+    def __sizeof__(self):
+class NoNewAttributesMixin:
+    def _freeze(self):
+    def __setattr__(self, key, value):
+class GroupByError(Exception):
+class DataError(GroupByError):
+class SpecificationError(GroupByError):
+class SelectionMixin:
+    def _selection_name(self):
+    def _selection_list(self):
+    def _selected_obj(self):
+    def ndim(self):
+    def _obj_with_exclusions(self):
+    def __getitem__(self, key):
+    def _gotitem(self, key, ndim, subset=None):
+    def aggregate(self, func, *args, **kwargs):
+    def _try_aggregate_string_function(self, arg: str, *args, **kwargs):
+    def _aggregate(self, arg, *args, **kwargs):
+            def nested_renaming_depr(level=4):
+            def _agg_1dim(name, how, subset=None):
+            def _agg_2dim(name, how):
+            def _agg(arg, func):
+            def is_any_series():
+            def is_any_frame():
+    def _aggregate_multiple_funcs(self, arg, _level, _axis):
+    def _shallow_copy(self, obj=None, obj_type=None, **kwargs):
+    def _get_cython_func(self, arg: str) -> Optional[str]:
+    def _is_builtin_func(self, arg):
+class IndexOpsMixin:
+    def transpose(self, *args, **kwargs):
+    def _is_homogeneous_type(self):
+    def shape(self):
+    def ndim(self):
+    def item(self):
+    def data(self):
+    def itemsize(self):
+    def nbytes(self):
+    def strides(self):
+    def size(self):
+    def flags(self):
+    def base(self):
+    def array(self) -> ExtensionArray:
+        # As a mixin, we depend on the mixing class having _values.
+    def to_numpy(self, dtype=None, copy=False):
+    def _ndarray_values(self) -> np.ndarray:
+        # As a mixin, we depend on the mixing class having values.
+    def empty(self):
+    def max(self, axis=None, skipna=True, *args, **kwargs):
+    def argmax(self, axis=None, skipna=True, *args, **kwargs):
+    def min(self, axis=None, skipna=True, *args, **kwargs):
+    def argmin(self, axis=None, skipna=True, *args, **kwargs):
+    def tolist(self):
+    def __iter__(self):
+    def hasnans(self):
+    def _reduce(
+    def _map_values(self, mapper, na_action=None):
+                # If a dictionary subclass defines a default value method,
+                def map_f(values, f):
+    def value_counts(
+    def unique(self):
+    def nunique(self, dropna=True):
+    def is_unique(self):
+    def is_monotonic(self):
+    def is_monotonic_decreasing(self):
+    def memory_usage(self, deep=False):
+    def factorize(self, sort=False, na_sentinel=-1):
+    def searchsorted(self, value, side="left", sorter=None):
+    def drop_duplicates(self, keep="first", inplace=False):
+    def duplicated(self, keep="first"):
+    def _update_inplace(self, result, verify_is_copy=True, **kwargs):

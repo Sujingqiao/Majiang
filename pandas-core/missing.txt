@@ -1,0 +1,20 @@
+def mask_missing(arr, values_to_mask):
+def clean_fill_method(method, allow_nearest=False):
+def clean_interp_method(method, **kwargs):
+def interpolate_1d(
+def _interpolate_scipy_wrapper(
+def _from_derivatives(xi, yi, x, order=None, der=0, extrapolate=False):
+def _akima_interpolate(xi, yi, x, der=0, axis=0):
+def interpolate_2d(
+def _cast_values_for_fillna(values, dtype):
+def _fillna_prep(values, mask=None, dtype=None):
+def pad_1d(values, limit=None, mask=None, dtype=None):
+def backfill_1d(values, limit=None, mask=None, dtype=None):
+def pad_2d(values, limit=None, mask=None, dtype=None):
+def backfill_2d(values, limit=None, mask=None, dtype=None):
+def get_fill_func(method):
+def clean_reindex_fill_method(method):
+def _interp_limit(invalid, fw_limit, bw_limit):
+        def _interp_limit(invalid, fw_limit, bw_limit):
+    def inner(invalid, limit):
+def _rolling_window(a, window):

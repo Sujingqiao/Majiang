@@ -1,0 +1,7 @@
+def use_bottleneck_cb(key):
+def use_numexpr_cb(key):
+def table_schema_cb(key):
+def is_terminal():
+def use_inf_as_na_cb(key):
+def register_plotting_backend_cb(key):
+def register_converter_cb(key):

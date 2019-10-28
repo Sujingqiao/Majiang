@@ -1,0 +1,51 @@
+def set_use_bottleneck(v=True):
+class disallow:
+    def __init__(self, *dtypes):
+    def check(self, obj):
+    def __call__(self, f):
+        def _f(*args, **kwargs):
+class bottleneck_switch:
+    def __init__(self, name=None, **kwargs):
+    def __call__(self, alt):
+        def f(values, axis=None, skipna=True, **kwds):
+def _bn_ok_dtype(dt, name):
+def _has_infs(result):
+def _get_fill_value(dtype, fill_value=None, fill_value_typ=None):
+def _maybe_get_mask(
+def _get_values(
+def _isfinite(values):
+def _na_ok_dtype(dtype):
+def _wrap_results(result, dtype, fill_value=None):
+def _na_for_min_count(values, axis):
+def nanany(values, axis=None, skipna=True, mask=None):
+def nanall(values, axis=None, skipna=True, mask=None):
+def nansum(values, axis=None, skipna=True, min_count=0, mask=None):
+def nanmean(values, axis=None, skipna=True, mask=None):
+def nanmedian(values, axis=None, skipna=True, mask=None):
+    def get_median(x):
+def _get_counts_nanvar(
+def nanstd(values, axis=None, skipna=True, ddof=1, mask=None):
+def nanvar(values, axis=None, skipna=True, ddof=1, mask=None):
+def nansem(values, axis=None, skipna=True, ddof=1, mask=None):
+def _nanminmax(meth, fill_value_typ):
+    def reduction(values, axis=None, skipna=True, mask=None):
+def nanargmax(values, axis=None, skipna=True, mask=None):
+def nanargmin(values, axis=None, skipna=True, mask=None):
+def nanskew(values, axis=None, skipna=True, mask=None):
+def nankurt(values, axis=None, skipna=True, mask=None):
+def nanprod(values, axis=None, skipna=True, min_count=0, mask=None):
+def _maybe_arg_null_out(
+def _get_counts(
+def _maybe_null_out(
+def _zero_out_fperr(arg):
+def nancorr(a, b, method="pearson", min_periods=None):
+def get_corr_func(method):
+    def _pearson(a, b):
+    def _kendall(a, b):
+    def _spearman(a, b):
+def nancov(a, b, min_periods=None):
+def _ensure_numeric(x):
+def make_nancomp(op):
+    def f(x, y):
+def _nanpercentile_1d(values, mask, q, na_value, interpolation):
+def nanpercentile(values, q, axis, na_value, mask, ndim, interpolation):

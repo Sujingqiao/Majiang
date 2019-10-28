@@ -1,0 +1,21 @@
+def get_group_index(labels, shape, sort, xnull):
+    def _int64_cut_off(shape):
+    def maybe_lift(lab, size):
+def get_compressed_ids(labels, sizes):
+def is_int64_overflow_possible(shape):
+def decons_group_index(comp_labels, shape):
+def decons_obs_group_ids(comp_ids, obs_ids, shape, labels, xnull):
+def indexer_from_factorized(labels, shape, compress=True):
+def lexsort_indexer(keys, orders=None, na_position="last"):
+def nargsort(items, kind="quicksort", ascending=True, na_position="last"):
+class _KeyMapper:
+    def __init__(self, comp_ids, ngroups, levels, labels):
+    def _populate_tables(self):
+    def get_key(self, comp_id):
+def get_flattened_iterator(comp_ids, ngroups, levels, labels):
+def get_indexer_dict(label_list, keys):
+def get_group_index_sorter(group_index, ngroups):
+def compress_group_index(group_index, sort=True):
+def _reorder_by_uniques(uniques, labels):
+def safe_sort(values, labels=None, na_sentinel=-1, assume_unique=False, verify=True):
+    def sort_mixed(values):

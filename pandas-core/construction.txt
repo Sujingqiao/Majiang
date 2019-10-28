@@ -1,0 +1,4 @@
+def array(
+def extract_array(obj, extract_numpy=False):
+def sanitize_array(
+def _try_cast(
