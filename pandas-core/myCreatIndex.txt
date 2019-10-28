@@ -1,1 +1,0 @@
-    cmd = "grep 'def \|class ' {0} > /tmp/{1}".format(f, name)
